@@ -10,13 +10,14 @@ import {EventsListComponent } from './events/events-list.component';
 import {Location} from './events/location';
 import {Event} from './events/Event';
 import {EventService} from './services/event.service';
+import {NavigationComponent} from './nav/nav.component';
 
 @NgModule({
     imports:[BrowserModule,
         RouterModule.forRoot(appRoutes)
     ],
     providers:[EventService],
-    declarations: [AppComponent, EventsListComponent, EventsDetailComponent],
+    declarations: [AppComponent, NavigationComponent,  EventsListComponent, EventsDetailComponent],
     bootstrap: [AppComponent]
 })
 export class AppModule{}
