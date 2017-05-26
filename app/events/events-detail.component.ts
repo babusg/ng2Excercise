@@ -1,14 +1,18 @@
 
 import { Component, Input, OnInit} from '@angular/core';
+import {ActivatedRoute} from '@angular/router';
 import { Event} from './Event';
-//import { Location} from './location';
+import {EventService} from '../services/event.service';
 @Component({
     templateUrl: '/app/events/eventsdetail.html',
     selector:'events-detail'
 })
-export class EventsDetailComponent {
+export class EventsDetailComponent  {
     @Input()
     event: Event;
+    constructor(private eventService: EventService, private activatedRoute: ActivatedRoute){
+
+    }
     //location:Location;
     
 

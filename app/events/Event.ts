@@ -1,8 +1,9 @@
 import {Location} from './location';
 
 export class Event {
+    id: Number;
     name:string;
-    date: Date;
+    date: string;
     time: string;
     location?: Location
     constructor(location:Location){

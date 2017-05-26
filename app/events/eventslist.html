@@ -1,5 +1,18 @@
 <div class="row">
-    <div  *ngFor = "let e of events">
-        <events-detail [event]= "e"></events-detail>
+    <div  *ngFor = "let event of events">        
+        <div [routerLink]= "['events', event.id]" class="col-md-6 col-xs-6">
+        <div style="margin-top:30px">
+            Event: {{event.name}}
+        </div>
+        <div>
+            Date: {{event.date}}
+        </div>
+        <div>
+            Time: {{event.time}}
+        </div>
+        <div>
+            Address: {{event.location.address}}, {{event.location.city}}, {{event.location.country}}
+            </div>
+        </div>   
     </div>
 </div>
